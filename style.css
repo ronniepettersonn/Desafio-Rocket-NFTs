@@ -1,0 +1,512 @@
+:root {
+    --body-background: #0e0e0e;
+    --color-logo: #ff5b50;
+    --card-color: #252525;
+    --text-color: #fff;
+    --subtitle-color: #5a5757;
+    --black-text: #000;
+    --color-input: #0D0D0D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+
+    background-color: var(--body-background);
+    font-family: Montserrat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.56rem 0 0 0;
+    margin-bottom: 5.62rem;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 3.75rem;
+    
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+header a.button {
+    display: flex;
+    align-items: center;
+    
+    gap: .93rem;
+    
+    background: var(--text-color);
+    padding: .62rem .87rem;
+
+    color: #000;
+    font-weight: 700;
+}
+
+.container {
+    width: 100vw;
+}
+
+.container .section1-bg {
+    background: url(./assets/background.png) no-repeat top;
+    background-size: 100%;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .section1-bg .section1 {
+    max-width: min(90rem, 90%);
+}
+
+.section1 .banner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section1 .banner .description {
+    display: flex;
+    flex-direction: column;
+}
+
+.section1 .banner .description p {
+    color: var(--text-color);
+    font-weight: 400;
+    margin-bottom: 3.43rem;
+}
+
+.section1 .banner .description .selected-artists {
+    display: flex;
+}
+
+.section1 .banner .description .selected-artists .avatar img {
+    position: absolute;
+}
+
+.section1 .banner .description .selected-artists .avatar img:nth-child(1) {
+    z-index: 4;
+}
+
+.section1 .banner .description .selected-artists .avatar img:nth-child(2) {
+    margin-left: 1.625rem;
+    z-index: 3;
+}
+
+.section1 .banner .description .selected-artists .avatar img:nth-child(3) {
+    margin-left: 3.25rem;
+    z-index: 2;
+}
+
+.section1 .banner .description .selected-artists .avatar img:nth-child(4) {
+    margin-left: 4.875rem;
+    z-index: 1;
+}
+
+.section1 .banner .description .selected-artists .info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 11.75rem;
+    color: var(--text-color);
+    margin-bottom: 0;
+    position: relative;
+    top: 3.4375rem;
+    z-index: 5;
+    font-size: 1.125rem;
+}
+
+.section1 .banner .description .selected-artists .info span {
+    font-weight: 700;
+}
+
+.section1 .banner .title h1 {
+    color: var(--text-color);
+    font-size: 3.12rem;
+}
+
+.section1 .banner .title h1 span {
+    color: var(--color-logo);
+}
+
+.section1 .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 3.75rem;
+    margin-top: 6.25rem;
+}
+
+.section1 .gallery img {
+    border: .0625rem solid var(--text-color);
+}
+
+.section2 {
+    position: relative;
+    width: 100vw;
+}
+
+.section2 .counter {
+    grid-area: counter;
+    height: 41.25rem;
+    border-right: .0625rem solid var(--subtitle-color);
+    border-bottom: .0625rem solid var(--subtitle-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4.375rem;
+    width: 17.5625rem;
+}
+
+.section2 .counter .counter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section2 .counter .counter-item h1 {
+    font-size: 3.12rem;
+    font-weight: 600;
+}
+
+.section2 .counter .counter-item p {
+    color: var(--subtitle-color);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.section2 article {
+    grid-area: article;
+    display: flex;
+    height: 22.5rem;
+}
+
+.section2 article .article1,
+.section2 article .article2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4.375rem 4.25rem;
+    gap: 3.9375rem;
+}
+
+.section2 article .article1 p,
+.section2 article .article2 p {
+    max-width: 27.18rem;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1.12rem;
+    line-height: 1.37rem;
+}
+
+.section2 article .article1 a,
+.section2 article .article2 a {
+    text-decoration: underline;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 1.12rem;
+    line-height: 1.37rem;
+}
+
+.section2 article .article1 span,
+.section2 article .article2 span {
+    color: var(--color-logo);
+}
+
+.section2 .banner {
+    grid-area: banner;
+}
+
+.section2 {
+    display: grid;
+    grid-template-areas: 
+    'counter article'
+    'counter banner'
+    ;
+    justify-content: center;
+}
+
+.container .section3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: min(90rem, 90%);
+}
+
+.container .section3 section {
+    max-width: min(90rem, 90%);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section3 .title h1 {
+    margin-top: 9.37rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.section3 .title h1 span {
+    color: var(--color-logo);
+}
+
+.section3 .arts {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 9.37rem;
+}
+
+.section3 .arts .line-center {
+    border-left: .5px solid var(--subtitle-color);
+}
+
+.section3 .arts .block-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3.12rem;
+}
+
+.section3 .arts .block-item .header-item {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    font-size: 1.87rem;
+    font-weight: 500;
+}
+
+.section3 .arts .block-item .info-item {
+    display: flex;
+    justify-content: space-between;
+    color: var(--subtitle-color);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2.75rem;
+    margin-bottom: 1.62rem;
+}
+
+.container .section4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: min(90rem, 90%);
+    margin-bottom: 9rem;
+}
+
+.container .section4 section {
+    max-width: min(90rem, 90%);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section4 .title {
+    display: flex;
+    justify-content: center;
+}
+
+.section4 .title h1 {
+    margin-top: 9.37rem;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 7.5rem;
+}
+
+.section4 .title h1 span {
+    color: var(--color-logo);
+}
+
+.section4 .artists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6.93rem;
+}
+
+.section4 .artists .artist-item {
+    display: flex;
+    align-items: center;
+    background: var(--card-color);
+    padding: 1.56rem 2rem;
+    gap: 2.5rem;
+    color: var(--text-color);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+
+.section4 .artists .artist-item .artist-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: .62rem;
+}
+
+.section4 .artists .artist-item .artist-item-info span {
+    color: var(--color-logo);
+    font-size: 1.25rem;
+}
+
+.section4 .artists .artist-item:nth-child(2), .section4 .artists .artist-item:nth-child(2) span {
+    background-color: var(--color-logo);
+    color: var(--text-color);
+}
+
+.section4 .all-artists {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.93rem;
+}
+
+.section4 .all-artists a {
+    display: flex;
+    gap: .81rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+
+    background-color: var(--card-color);
+}
+
+footer .footer {
+    max-width: min(90rem, 90%);
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer section {
+    max-width: min(90rem, 90%);
+    width: 100%;
+    margin: 0 auto;
+}
+
+footer .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5.12rem;
+    padding-bottom: 3.75rem;
+    /* border-bottom: .5px solid var(--subtitle-color); */
+}
+
+footer section .header a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 5rem;
+    background: var(--color-logo);
+}
+
+footer .content {
+    display: flex;
+    border-top: 1px solid var(--subtitle-color);
+    border-bottom: 1px solid var(--subtitle-color);
+}
+
+footer .content .form {
+    display: flex;
+    flex-direction: column;
+    padding: 4.18rem 3.87rem 4.18rem 0;
+    color: var(--text-color);
+    border-right: 1px solid var(--subtitle-color);
+}
+
+footer .content .form h1 {
+    font-size: 1.87rem;
+    font-weight: 500;
+    margin-bottom: 1.56rem;
+}
+
+footer .content .form .input {
+    display: flex;
+    gap: 0;
+}
+
+footer .content .form .input input {
+    padding: 1.25rem;
+    background: var(--color-input);
+    font-size: 1.25rem;
+    color: var(--subtitle-color);
+}
+
+footer .content .form .input input::placeholder {
+    color: var(--subtitle-color);
+}
+
+footer .content .form .input button {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 0 1.56rem;
+    cursor: pointer;
+    background: var(--text-color);
+}
+
+footer .content .form h1 span {
+    color: var(--color-logo);
+}
+
+footer .content .links {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    gap: 8rem;
+    font-size: 1.25rem;
+}
+
+footer .content .links ul li {
+    color: var(--subtitle-color);
+}
+
+footer .content .links ul li:nth-child(1) {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+footer .content .links ul {
+    display: flex;
+    flex-direction: column;
+    gap: .43rem;
+    list-style: none;
+}
+
+footer section .footer-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.31rem 0;
+    margin: 0;
+}
+
+footer section .footer-footer a{
+    color: var(--subtitle-color);
+}
+
+footer section .footer-footer .social-media {
+    display: flex;
+    gap: 3.12rem;
+}
